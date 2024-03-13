@@ -1,10 +1,13 @@
+var defaultDelayDays = "7d"; // 検索条件に使用するデフォルトの日数
+var defaultPurgeLabel = "gas-purge-in-one-week"; // 検索条件に使用するデフォルトのラベル名
+
+// delayDays以上前に受信した labelName ラベルがついているメールを削除する
 function purgeEmailsInOneWeek() {
-  // 1週間以上前に受信した "gas-purge-in-one-week" ラベルがついているメールを削除する
-  var delayDays = "7d"; // 検索条件に使用する日数
-  var labelName = "gas-purge-in-one-week"; // 検索条件に使用するラベル名
+  var delayDays = defaultDelayDays;
+  var purgeLabel = defaultPurgeLabel;
 
   // "older_than" とラベル名を組み合わせた検索クエリ
-  var searchQuery = "label:" + labelName + " older_than:" + delayDays;
+  var searchQuery = "label:" + purgeLabel + " older_than:" + delayDays;
 
   // 検索クエリに基づいてメールスレッドを検索
   var deleteThreads = GmailApp.search(searchQuery);
