@@ -1,0 +1,2 @@
+export CRED_PATH="/path/to/.clasprc.json"
+export PROJECT_ID="Script ID shwon in settings page of Apps Script"
