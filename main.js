@@ -2,7 +2,7 @@ var defaultDelayDays = "7d"; // 検索条件に使用するデフォルトの日
 var defaultPurgeLabel = "gas-purge-in-one-week"; // 検索条件に使用するデフォルトのラベル名
 
 // delayDays以上前に受信した labelName ラベルがついているメールを削除する
-function purgeEmailsInOneWeek() {
+function purgeEmailsWithLabel() {
   var delayDays = defaultDelayDays;
   var purgeLabel = defaultPurgeLabel;
 
