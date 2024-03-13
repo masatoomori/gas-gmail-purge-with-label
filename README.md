@@ -4,6 +4,15 @@ Gmail のラベルを指定して、古いメールを削除する Google Apps S
 
 ## 使い方
 
+### 変数の設定
+
+`main.js` の下記を任意の値に設定します。
+
+```javascript
+var defaultDelayDays = "7d"; // 検索条件に使用するデフォルトの日数
+var defaultPurgeLabel = "gas-purge-in-one-week"; // 検索条件に使用するデフォルトのラベル名
+```
+
 ### コードのデプロイ
 
 1. [Google Apps Script](https://script.google.com/) で適当なプロジェクトを作成します。
