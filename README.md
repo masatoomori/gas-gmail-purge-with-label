@@ -13,6 +13,8 @@ var defaultDelayDays = "7d"; // 検索条件に使用するデフォルトの日
 var defaultPurgeLabel = "gas-purge-in-one-week"; // 検索条件に使用するデフォルトのラベル名
 ```
 
+`defaultPurgeLabel` に設定したラベルをメールに付与するルールはあらかじめ Gmail のフィルタで設定しておくこと。
+
 ### コードのデプロイ
 
 1. [Google Apps Script](https://script.google.com/) で適当なプロジェクトを作成します。
@@ -37,3 +39,13 @@ var defaultPurgeLabel = "gas-purge-in-one-week"; // 検索条件に使用する�
    - 連絡先メールアドレス：自分のメールアドレス
    - その他：空欄
 1. テストユーザに自分のメールアドレスを追加します。
+
+### トリガーの設定
+
+プロジェクトのコンソール画面から、`トリガー` -> `トリガーの追加` を選択し、スクリプトを定期実行させる
+
+- 実行する関数を選択：`purgeEmailsWithLabel`
+- 実行するデプロイを選択：`Head`
+- イベントのソースを選択：`時間主導型`
+- 時間ベースのトリガーのタイプを選択：`日付ベースのタイマー`
+- 時刻を選択：任意の時間
