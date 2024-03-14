@@ -18,6 +18,7 @@ var defaultPurgeLabel = "gas-purge-in-one-week"; // 検索条件に使用する�
 ### コードのデプロイ
 
 1. [Google Apps Script](https://script.google.com/) で適当なプロジェクトを作成します。
+1. `src` ディレクトリに移動します。
 1. `clasp login` でログインし、`.envrc` に `PRED_PATH` を設定します。
 1. 作成したプロジェクトの設定画面から`スクリプトID`を確認し、`.envrc` の `PROJECT_ID` に設定します。
 1. `bash clone.sh` でプロジェクトをクローンします。
