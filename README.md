@@ -13,7 +13,7 @@ var defaultDelayDays = "7d"; // 検索条件に使用するデフォルトの日
 var defaultPurgeLabel = "gas-purge-in-one-week"; // 検索条件に使用するデフォルトのラベル名
 ```
 
-`defaultPurgeLabel` に設定したラベルをメールに付与するルールはあらかじめ Gmail のフィルタで設定しておくこと。
+`defaultPurgeLabel` に設定したラベルをメールに付与するルールはあらかじめ Gmail の機能を利用して設定しておきます。
 
 ### コードのデプロイ
 
@@ -22,7 +22,8 @@ var defaultPurgeLabel = "gas-purge-in-one-week"; // 検索条件に使用する�
 1. `clasp login` でログインし、`.envrc` に `PRED_PATH` を設定します。
 1. 作成したプロジェクトの設定画面から`スクリプトID`を確認し、`.envrc` の `PROJECT_ID` に設定します。
 1. `bash clone.sh` でプロジェクトをクローンします。
-1. このリポジトリを編集し、`clasp push` でプロジェクトに反映します。
+1. 必要に応じて `src` ディレクトリのファイルを編集します。
+1. `clasp push` でプロジェクトに反映します。
 
 ### サービスの追加
 
