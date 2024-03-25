@@ -17,7 +17,7 @@ var defaultPurgeLabel = "gas-purge-in-one-week"; // 検索条件に使用する�
 
 ### コードのデプロイ
 
-1. [Google Apps Script](https://script.google.com/) で適当なプロジェクトを作成します。
+1. [Google Apps Script](https://script.google.com/) で任意の名前（e.g. `GmailPurgeWithLabel`）で GAS プロジェクトを作成します。
 1. `src` ディレクトリに移動します。
 1. `.envrc.example` を `.envrc` にリネームします。
 1. `clasp login` でログインし、`.envrc` に `PRED_PATH` を設定します。
