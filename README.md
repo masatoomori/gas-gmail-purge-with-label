@@ -17,7 +17,7 @@ var defaultPurgeLabel = "gas-purge-in-one-week"; // 検索条件に使用する�
 
 ### コードのデプロイ
 
-1. [Google Apps Script](https://script.google.com/) で適当なプロジェクトを作成します。
+1. [Google Apps Script](https://script.google.com/) で任意の名前（e.g. `GmailPurgeWithLabel`）で GAS プロジェクトを作成します。
 1. `src` ディレクトリに移動します。
 1. `.envrc.example` を `.envrc` にリネームします。
 1. `clasp login` でログインし、`.envrc` に `PRED_PATH` を設定します。
@@ -28,20 +28,24 @@ var defaultPurgeLabel = "gas-purge-in-one-week"; // 検索条件に使用する�
 
 ### サービスの追加
 
-プロジェクトのコンソール画面から、`サービス` -> `サービスの追加` -> `Gmail API ドキュメント`を選択し、Gmail API を有効にします。
+GAS プロジェクトのコンソール画面から、`サービス` -> `サービスの追加` -> `Gmail API ドキュメント`を選択し、Gmail API を有効にします。
 
 ### アプリの登録
 
 アプリを登録し、OAuth クライアント ID を取得します。
 
-1. プロジェクトのコンソール画面からプロジェクトの設定を開きます。
-1. あらかじめ作成しておいた Google Cloud Platform のプロジェクト番号を入力します。
+1. GAS プロジェクトのコンソール画面からプロジェクトの設定を開きます。
+1. 事前に作成しておいた Google Cloud Platform のプロジェクト番号を入力します。
 1. `OAuth 同意画面` で必要な情報を入力します。
    - `アプリ名`：gas-gmail-purge-with-label
    - `サポートメール`：自分のメールアドレス
    - `連絡先メールアドレス`：自分のメールアドレス
    - その他の項目：空欄
-1. テストユーザに自分のメールアドレスを追加します。
+1. `スコープ` で Gmail API に関する 14 個のスコープを追加します。
+1. `テストユーザー` で自分のメールアドレスを追加します。
+
+> [!NOTE]
+> GCP プロジェクトの設定は、GCP のコンソール画面から、`OAuth 同意画面` を選択し、後で変更することができます。
 
 ### トリガーの設定
 
